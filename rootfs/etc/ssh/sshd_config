@@ -16,4 +16,3 @@ GatewayPorts no
 X11Forwarding no
 PermitTTY no
 PrintMotd no
-PrintLastLog no
