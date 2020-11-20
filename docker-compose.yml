@@ -1,7 +1,7 @@
 version: '3.4'
 services:
   tunneling:
-    image: coolersport/ssh-tunneling
+    image: coolersport/ssh-tunneling:1.0
     read_only: true
     ports:
     - 2222:2222
