@@ -1,0 +1,14 @@
+version: '3.4'
+services:
+  tunneling:
+    image: coolersport/ssh-tunneling
+    read_only: true
+    ports:
+    - 2222:2222
+    volumes:
+    - home:/home:rw
+    - ./opt:/opt:ro
+volumes:
+  home:
+    labels:
+    - "app=sshtunneling"

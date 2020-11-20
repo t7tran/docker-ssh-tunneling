@@ -1,0 +1,19 @@
+Port 2222
+ListenAddress 0.0.0.0
+
+HostKey /home/tunneling/.conf/ssh_host_rsa_key
+
+PubkeyAuthentication yes
+
+AuthorizedKeysFile	.ssh/authorized_keys
+
+PasswordAuthentication no
+
+ChallengeResponseAuthentication no
+
+AllowTcpForwarding yes
+GatewayPorts no
+X11Forwarding no
+PermitTTY no
+PrintMotd no
+PrintLastLog no
