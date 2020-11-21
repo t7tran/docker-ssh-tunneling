@@ -14,7 +14,7 @@ cp /opt/ssh_host_* $dotconf 2>/dev/null
 chmod 600 $dotconf/ssh_host_* 2>/dev/null
 
 if [[ -z "$@" ]]; then
-	exec /usr/sbin/sshd -D
+	exec /usr/sbin/sshd -D -e
 else
 	exec "$@"
 fi

@@ -7,6 +7,7 @@ services:
     - 2222:2222
     volumes:
     - home:/home:rw
+    - temp:/tmp:rw
     - ./opt:/opt:ro
   custom-tunneling:
     image: coolersport/ssh-tunneling:1.0
@@ -16,13 +17,18 @@ services:
     - -D
     - -f
     - /etc/whitelist_sshd_config
+    - -e
     ports:
     - 2223:2222
     volumes:
     - ./whitelist_sshd_config:/etc/whitelist_sshd_config:ro
     - home:/home:rw
+    - temp:/tmp:rw
     - ./opt:/opt:ro
 volumes:
   home:
+    labels:
+    - "app=sshtunneling"
+  temp:
     labels:
     - "app=sshtunneling"
