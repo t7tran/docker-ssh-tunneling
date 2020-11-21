@@ -8,6 +8,20 @@ services:
     volumes:
     - home:/home:rw
     - ./opt:/opt:ro
+  custom-tunneling:
+    image: coolersport/ssh-tunneling:1.0
+    read_only: true
+    command:
+    - /usr/sbin/sshd
+    - -D
+    - -f
+    - /etc/whitelist_sshd_config
+    ports:
+    - 2223:2222
+    volumes:
+    - ./whitelist_sshd_config:/etc/whitelist_sshd_config:ro
+    - home:/home:rw
+    - ./opt:/opt:ro
 volumes:
   home:
     labels:

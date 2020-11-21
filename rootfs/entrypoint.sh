@@ -1,4 +1,4 @@
-#!/usr/bin/env ash
+#!/usr/bin/env bash
 
 dotssh=/home/tunneling/.ssh
 dotconf=/home/tunneling/.conf
@@ -9,6 +9,7 @@ touch $dotssh/authorized_keys 2>/dev/null
 chown tunneling:tunneling $dotssh $dotssh/authorized_keys 2>/dev/null 
 chmod 700 $dotssh 2>/dev/null
 chmod 600 $dotssh/authorized_keys 2>/dev/null
+for f in `ls -1 /opt/ssh_host_* 2>/dev/null`; do [ ! -r $f ] && echo $f is not readable && exit 1; done
 cp /opt/ssh_host_* $dotconf 2>/dev/null
 chmod 600 $dotconf/ssh_host_* 2>/dev/null
 
