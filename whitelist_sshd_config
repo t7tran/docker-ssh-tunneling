@@ -11,7 +11,7 @@ PasswordAuthentication no
 
 ChallengeResponseAuthentication no
 
-AllowTcpForwarding yes
+AllowTcpForwarding local
 GatewayPorts no
 X11Forwarding no
 PermitTTY no
