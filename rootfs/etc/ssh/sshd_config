@@ -16,3 +16,4 @@ GatewayPorts no
 X11Forwarding no
 PermitTTY no
 PrintMotd no
+Banner /etc/ssh/banner.txt
