@@ -5,7 +5,7 @@ HostKey /home/tunneling/.conf/ssh_host_rsa_key
 
 PubkeyAuthentication yes
 
-AuthorizedKeysFile	.ssh/authorized_keys
+AuthorizedKeysFile	/home/%u/.ssh/authorized_keys
 
 PasswordAuthentication no
 

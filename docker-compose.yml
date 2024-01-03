@@ -1,7 +1,7 @@
 version: '3.4'
 services:
   tunneling:
-    image: coolersport/ssh-tunneling:1.0
+    image: ghcr.io/t7tran/ssh-tunneling:1.3.0
     read_only: true
     ports:
     - 2222:2222
@@ -10,7 +10,7 @@ services:
     - temp:/tmp:rw
     - ./opt:/opt:ro
   custom-tunneling:
-    image: coolersport/ssh-tunneling:1.0
+    image: ghcr.io/t7tran/ssh-tunneling:1.3.0
     read_only: true
     command:
     - /usr/sbin/sshd

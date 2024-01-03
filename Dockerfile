@@ -1,8 +1,8 @@
-FROM alpine:3.15
+FROM alpine:3.19.0
 
 COPY ./rootfs /
 
-RUN addgroup tunneling && adduser -S -D -G tunneling tunneling && \
+RUN addgroup tunneling && adduser -u 1000 -S -D -G tunneling tunneling && \
     apk add --no-cache bash openssh && \
     chmod 777 /etc/ssh/ && \
     rm -rf /run && \

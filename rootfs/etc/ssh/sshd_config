@@ -5,7 +5,7 @@ HostKey /home/tunneling/.conf/ssh_host_rsa_key
 
 PubkeyAuthentication yes
 
-AuthorizedKeysFile	.ssh/authorized_keys
+AuthorizedKeysFile	/home/%u/.ssh/authorized_keys
 
 PasswordAuthentication no
 
@@ -17,3 +17,5 @@ X11Forwarding no
 PermitTTY no
 PrintMotd no
 Banner /etc/ssh/banner.txt
+
+#LogLevel DEBUG3
